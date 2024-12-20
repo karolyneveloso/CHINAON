@@ -1,0 +1,319 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding-top: 60px; /* Compensa a altura da seção fixa */
+}
+/*estilo da header*/
+#Header  {
+    background-color:rgb(47, 47, 47);
+    color: #ffffff;
+    padding: 20px 20px;
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    top: 0; /* Gruda no topo */
+    left: 0;
+    width: 100%; /* Garante que ocupe toda a largura */
+    z-index: 1000; /* Mantém a seção acima de outros elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra para destaque */
+    gap: 40px;
+}
+/* Estilo da logo */
+#Header .logo {
+    display: flex; /* Garante alinhamento flexível */
+    align-items: center; /* Centraliza verticalmente com o Header */
+    margin-right: 550px; /* Margem pequena à esquerda */
+}
+
+#Header .logo img {
+    max-height: 45px; /* Ajusta o tamanho máximo da logo */
+    width: auto; /* Mantém a proporção original */
+    object-fit: contain; /* Garante que a imagem não seja cortada */
+}
+
+
+/*estilo das opções*/
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 35px;
+}
+nav ul li {
+    display: inline;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: transform 0.3s, color 0.3s; /* Adiciona transição suave para o movimento e a cor */
+    position: relative;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    color: #0056b3;
+    transform: translateY(-5px); /* Move a palavra levemente para cima */
+}
+/* Estilo geral do seletor */
+.language-selector {
+    width: 100%;
+    max-width: 300px; /* Ajuste conforme necessário */
+    padding: 10px;
+    font-size: 16px;
+    color: #fff; 
+    background-color: #0056b3; /* Fundo azul das opções */
+    border-radius: 5px; /* Bordas arredondadas */
+    appearance: none; /* Remove o estilo padrão do navegador */
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s, color 0.3s; /* Suaviza as transições */
+}
+
+/* Estilo do dropdown */
+.language-selector option {
+    background-color: #ffffff; /* Fundo azul das opções */
+    color: #0056b3; /* Texto branco */
+    padding: 10px;
+}
+
+/* Hover no seletor */
+.language-selector:hover {
+    background-color: #0056b3; /* Fundo azul ao passar o mouse */
+    color: #fff; /* Texto branco ao passar o mouse */
+    border-color: #0056b3; /* Muda a cor da borda para azul */
+}
+
+/* Foco no seletor */
+.language-selector:focus {
+    outline: none;
+    border: 2px solid #0056b3; /* Destaque ao foco */
+}
+
+/* Estilo para a seção "inicio" */
+/* Estilo da seção "inicio" */
+#inicio {
+    position: relative;
+    width: 100vw; /* Ocupa toda a largura da tela */
+    height: 82vh; /* Ocupa toda a altura da tela */
+    overflow: hidden; /* Garante que o vídeo não ultrapasse os limites */
+}
+
+/* Estilo para o vídeo de fundo */
+#inicio .background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza o vídeo */
+    min-width: 100%; /* Garante que o vídeo ocupe a largura */
+    min-height: 100%; /* Garante que o vídeo ocupe a altura */
+    object-fit: cover; /* Faz o vídeo cobrir todo o espaço */
+    z-index: -1; /* Coloca o vídeo atrás do conteúdo */
+    
+}
+
+#inicio .estilologo{
+
+    text-shadow: 2px 2px 25px rgba(0, 0, 0, 0.8); /* Sombra preta suave */
+    width: 15vw;
+    height: 10vw ;
+
+}
+
+/* Estilo para o conteúdo sobre o vídeo */
+#inicio .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    left: 20px; /* Espaço em relação à lateral esquerda */
+    color: #ffffff;
+    font-weight: bolder;
+    text-align: center; /* Alinha o texto à esquerda */
+    z-index: 2; /* Garante que o conteúdo fique acima do vídeo */
+    text-shadow: 2px 2px 25px rgba(0, 0, 0, 1); /* Sombra preta suave */
+    margin-top: 200px;
+    
+    
+}
+
+#inicio .content h1 {
+    font-size: 50px; /* Ajusta o tamanho do título */
+    margin-bottom: 0px;
+    font-weight: bold;  
+}
+
+
+
+.titulo-content {
+    position: relative;
+    width: 100%;
+    z-index: -2; 
+}
+
+/* Estilo da imagem */
+.titulo-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw; /* Ocupa toda a largura da tela */
+    height: 100vh; /* Ocupa toda a altura da tela */
+    z-index: 1;
+}
+
+/* Estilo do título */
+.titulo-texto {
+    position: absolute;
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Ajusta para centralização perfeita */
+    font-size: 30px; /* Tamanho do texto */
+    font-family: Arial, sans-serif;
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 25px rgba(0, 0, 0, 0.8); /* Sombra preta suave */
+    z-index: 2; /* Garante que o texto fique acima da imagem */
+    margin: 0; /* Remove margens */
+    text-align: center; /* Centraliza o texto se tiver mais de uma linha */
+}
+
+#cultura{
+    position: relative;
+    max-width: 70%;
+    background-color: #1d334a;
+    margin-top: 100px; /* Reduza o valor aqui */
+    height: 75vh;
+    margin-left: 240px;
+    border-radius: 20px; /* Borda arredondada */
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.7); /* Sombra preta suave */
+    color: #c9c9c9; /* Cor do texto */
+    font-size: 18px;
+    text-shadow: 2px 2px 25px rgba(0, 0, 0, 0.8); /* Sombra preta suave */
+}
+
+
+.conteudo2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  /* Centraliza verticalmente os itens */
+    gap: 5%;  /* Aumenta o espaçamento entre texto e imagens */
+    margin-top: 30px;
+}
+
+/* Texto à esquerda */
+.texto-container2 {
+    width: 70%;  /* Ajusta a largura do texto para ficar mais estreito */
+    text-align: left;  /* Garante que o texto fique alinhado à esquerda */
+    
+}
+
+.cultura p ul {
+    list-style-type: none; /* Remove os marcadores padrão */
+    margin: 15px 0;
+    padding-left: 20px;
+   
+}
+
+.cultura p ul li {
+    line-height: 1.8; /* Melhora a legibilidade */
+}
+
+
+
+.cultura p ul li strong {
+    font-weight: bolder; /* Destaque nos títulos */
+    color: #ffffff; /* Cor para combinar com o tema */
+}
+#cultura h3
+{
+ font-size: 25px;
+ font-weight: bolder;
+ line-height: 1.5;
+ text-align: center;
+
+}
+
+
+/* Container das imagens */
+.imagens-container2 {
+    width: 800px; /* Ajusta para as imagens ocuparem menos espaço */
+    height: 75vh; /* Ajuste a altura conforme necessário */
+    position: relative;
+    display: flex; /* Flexbox para colocar as imagens lado a lado */
+    justify-content: space-between; /* Espaçamento igual entre as imagens */
+    overflow: hidden; /* Esconde qualquer conteúdo extra */
+}
+
+/* Estilo das imagens */
+.imagem2 {
+    width: 30%; /* Diminui a largura das imagens para 30% */
+    height: 100%;
+    object-fit: cover; /* A imagem cobrirá a área do contêiner */
+    opacity: 0; /* Inicialmente invisível */
+    animation: fadeInOut 12s infinite; /* Animação de fade (aparecer/desaparecer) */
+    transition: opacity 1s ease-in-out;
+    border-radius: 20px;
+}
+
+/* Animação de transição das imagens */
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0;
+    }
+    33% {
+        opacity: 1; 
+    }
+    66% {
+        opacity: 0;
+    }
+   
+}
+
+/* Delay para cada imagem (faz as imagens aparecerem uma de cada vez) */
+.imagem2:nth-child(1) {
+    animation-delay: 0s; /* A primeira imagem começa imediatamente */
+}
+
+.imagem2:nth-child(2) {
+    animation-delay: 2s; /* A segunda imagem aparece após 3 segundos */
+}
+
+.imagem2:nth-child(3) {
+    animation-delay: 4s; /* A terceira imagem aparece após 6 segundos */
+}
+
+/* Caixa de texto ao lado das imagens */
+.texto-container {
+    width: 50%; /* Largura do lado direito */
+    padding: 20px;
+    color: #fff;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Alinha o texto verticalmente */
+    height: 20vw;
+}
+
+
+/* Título da caixa de texto */
+.texto-container h3 {
+    font-size: 26px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-align: left; /* Garantir que o título fique alinhado à esquerda */
+    font-family: 'poppins' , serif;
+    line-height: 1.5;
+}
+
+/* Parágrafo dentro da caixa */
+.texto-container p {
+       
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    font-family: 'poppins' , serif;
+    text-align: left;
+
+}
+
